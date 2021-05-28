@@ -22,7 +22,6 @@ const CropContainer = () => {
   const [crop, setCrop] = useState({ x: 0, y: 0 });
   const [zoom, setZoom] = useState(1);
   const [rotation, setRotation] = useState(0);
-  // eslint-disable-next-line no-unused-vars
   const [usersCroppedAreaPixels, setUsersCroppedAreaPixels] = useState(null);
 
   const onCropComplete = useCallback((croppedArea, croppedAreaPixels) => {

@@ -1,3 +1,3 @@
 export default function getRadianAngle(degreeValue) {
-  return (degreeValue * Math.PI) / 100;
+  return (degreeValue * Math.PI) / 180;
 }
