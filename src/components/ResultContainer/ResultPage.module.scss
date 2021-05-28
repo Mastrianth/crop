@@ -1,0 +1,66 @@
+@import '../../assets/scss/variables';
+
+.resultContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: center;
+  margin-top: 120px;
+  position: relative;
+  width: 100vw;
+}
+
+.tooltipWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 90vw;
+}
+
+.resultContainer p {
+  font-size: 14px;
+  max-width: 1140px;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+.tooltip {
+  background: #fff;
+  border: 1px solid $BACKGROUND-SECONDARY;
+  border-radius: 10px;
+  box-sizing: border-box;
+  display: none;
+  font-size: 10px;
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  top: 110%;
+  width: 90vw;
+  word-wrap: break-word;
+  z-index: 4 !important;
+}
+
+.tooltipWrapper:hover .tooltip {
+  display: block;
+}
+
+.resultContainer h2 {
+  color: $BACKGROUND-SECONDARY;
+  margin-bottom: 10px;
+  margin-top:20px;
+}
+
+.button {
+  background: $BACKGROUND-SECONDARY;
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 3 !important;
+}
+
+.button:hover {
+  background: $BACKGROUND-PRIMARY;
+}

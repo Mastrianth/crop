@@ -1,0 +1,33 @@
+@import '../../assets/scss/variables';
+
+.errorHandler {
+  align-items: center;
+  background: transparent;
+  color: transparent;
+  display: flex;
+  font-size: 18px;
+  font-weight: 400;
+  height: 64px;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translateY(-64px);
+  transition: 0.2s ease;
+  width: 100vw;
+  z-index: 100;
+
+  p {
+    text-align: center;
+  }
+}
+
+.errorHandler.show {
+  background: $ERROR;
+  color: #fff;
+  transform: translateY(0);
+}
+
+.errorHandler.success {
+  transform: translateY(-64px);
+}

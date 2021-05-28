@@ -1,0 +1,86 @@
+@import '../../assets/scss/variables';
+
+.header {
+  align-items: center;
+  background: $BACKGROUND-PRIMARY;
+  box-shadow: $BACKGROUND-SECONDARY;
+  display: flex;
+  height: 64px;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 3;
+}
+
+.contentContainer {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1140px;
+  padding: 0 30px;
+  width: 100%;
+}
+
+.logo {
+  align-items: center;
+  color: $COLOR-TEXT;
+  display: flex;
+  font-size: 10px;
+  font-weight: 400;
+  justify-content: flex-start;
+}
+
+.logo span {
+  display: inline-block;
+  width: 40px;
+}
+
+.img {
+  background: $BACKGROUND-SECONDARY;
+  border-radius: $BORDER-RADIUS;
+  height: 30px;
+  margin-right: 10px;
+  width: 30px;
+}
+
+.stepContainer {
+  align-items: center;
+  color: $MAIN-TEXT;
+  display: flex;
+  font-size: 14px;
+  justify-content: center;
+}
+
+.step {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.step.active {
+  opacity: 1;
+  width: auto;
+}
+
+.stepWrapper {
+  align-items: center;
+  border: 1px solid $MAIN-TEXT;
+  border-radius: $BORDER-RADIUS;
+  display: flex;
+  height: 20px;
+  justify-content: center;
+  margin-right: 10px;
+  width: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .stepContainer {
+    display: none;
+  }
+}

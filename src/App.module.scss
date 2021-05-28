@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+.fade-enter,
+.fade-exit {
+  transition: 0.35s opacity;
+}
+
+.fade-enter,
+.fade-enter-active {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  z-index: 1;
+}

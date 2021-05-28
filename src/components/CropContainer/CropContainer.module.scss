@@ -1,0 +1,72 @@
+@import '../../assets/scss/variables';
+
+.cropContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 64px;
+  width: 100vw;
+}
+
+.simpleBlock {
+  height: 80vh;
+}
+
+.cropper {
+  height: 300px !important;
+  width: 300px !important;
+}
+
+.controls {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+  width: 100vw;
+  z-index: 3;
+}
+
+.wrapper {
+  align-items: center;
+  display: flex;
+  font-size: 16px;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 280px;
+
+  p {
+    color: $MAIN-TEXT;
+    line-height: 16px;
+  }
+}
+
+.sliderWrapper {
+  width: 200px;
+}
+
+.slider {
+  color: $BACKGROUND-SECONDARY;
+}
+
+.thumb {
+  color: $MAIN-TEXT;
+}
+
+.buttonWrapper {
+  display: flex;
+  margin-top: 15px;
+}
+
+.button {
+  background: $BACKGROUND-SECONDARY;
+  margin: 0 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.button:hover {
+  background: $BACKGROUND-PRIMARY;
+}

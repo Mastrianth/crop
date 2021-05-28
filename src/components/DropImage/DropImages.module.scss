@@ -1,0 +1,112 @@
+@import '../../assets/scss/variables';
+
+.dropImages {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+}
+
+.contentContainer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 120px;
+  max-width: 1140px;
+  width: 100%;
+}
+
+.contentContainer:focus {
+  outline: none !important;
+}
+
+.svgContainer {
+  align-items: center;
+  border: 1px solid $MAIN-TEXT;
+
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px 0;
+  outline: none !important;
+  padding: 40px;
+  transition: 0.25s ease;
+  width: 90%;
+}
+
+.svgContainer svg g g {
+  fill: $BACKGROUND-SECONDARY !important;
+  transition: 0.25s ease;
+}
+
+.contentContainer h2,
+.contentContainer span {
+  color: $MAIN-TEXT;
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contentContainer span {
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.label {
+  background: $BACKGROUND-SECONDARY;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-top: 25px;
+  padding: 10px 15px;
+  transition: 0.15s ease;
+  word-spacing: 0.1em;
+}
+
+.label input {
+  display: none;
+}
+
+.svgContainer:hover {
+  box-shadow: 0 0 20px $BACKGROUND-SECONDARY;
+}
+
+.svgContainer:hover svg g g {
+  fill: $MAIN-TEXT !important;
+}
+
+.svgContainer.error svg g g {
+  fill: $ERROR !important;
+}
+
+.svgContainer.success svg g g {
+  fill: $SUCCESS !important;
+}
+
+.svgContainer.onDrug {
+  animation: onDrug, 1s, ease,infinite;
+}
+
+@keyframes onDrug {
+  from {
+    box-shadow: 0 0 20px $BACKGROUND-SECONDARY;
+  }
+
+  to {
+  box-shadow: 0 0 50px $BACKGROUND-SECONDARY;
+  }
+}
+
+.support {
+  font-size: 14px !important;
+}
