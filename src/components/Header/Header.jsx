@@ -1,4 +1,5 @@
 import React, { useContext, useMemo } from 'react';
+import { Button } from '@material-ui/core';
 import styles from './Header.module.scss';
 import AppContext from '../../context/AppContext';
 
@@ -45,11 +46,18 @@ const Header = () => {
     );
 
   return useMemo(() => (
-    <header className={styles.header}>
+    <header className={styles.header} id="header">
       <div className={styles.contentContainer}>
         <div className={styles.logo}>
           <div className={styles.img} />
           <span>TASK 5 LOGOTYPE</span>
+        </div>
+
+        <div className={styles.buttonWrapper}>
+          {/* eslint-disable-next-line max-len */}
+          <Button onClick={() => window.scrollTo(0, 0)} classes={{ root: styles.button }}>Scroll top</Button>
+          {/* eslint-disable-next-line max-len */}
+          <Button onClick={() => window.scrollTo(0, 500)} classes={{ root: styles.button }}>Scroll bot</Button>
         </div>
 
         <div className={styles.stepContainer}>

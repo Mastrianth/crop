@@ -79,8 +79,31 @@
   width: 20px;
 }
 
+
+.buttonWrapper {
+  display: none;
+}
+
+.button {
+  background: $BACKGROUND-SECONDARY;
+  margin: 0 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 10px;
+}
+
+.button:hover {
+  background: $BACKGROUND-PRIMARY;
+}
+
 @media screen and (max-width: 767px) {
   .stepContainer {
     display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .buttonWrapper {
+    display: flex;
   }
 }
