@@ -66,6 +66,7 @@ const CropContainer = () => {
             onZoomChange={setZoom}
             onRotationChange={setRotation}
             cropSize={{ width: 300, height: 300 }}
+            style={{ containerStyle: { background: '#000' } }}
           />
 
           <div className={styles.controls}>
