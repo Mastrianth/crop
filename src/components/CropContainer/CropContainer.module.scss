@@ -27,6 +27,7 @@
   margin-bottom: 50px;
   width: 100vw;
   z-index: 3;
+  padding-top: 400px;
 }
 
 .wrapper {
@@ -38,8 +39,9 @@
   width: 280px;
 
   p {
-    color: $MAIN-TEXT;
+    color: $COLOR-TEXT;
     line-height: 16px;
+    z-index: 6;
   }
 }
 
@@ -48,11 +50,11 @@
 }
 
 .slider {
-  color: $BACKGROUND-SECONDARY;
+  color: $COLOR-TEXT;
 }
 
 .thumb {
-  color: $MAIN-TEXT;
+  color: $COLOR-PRIMARY;
 }
 
 .buttonWrapper {
@@ -61,7 +63,7 @@
 }
 
 .button {
-  background: $BACKGROUND-SECONDARY;
+  background: #f8f8f8;
   margin: 0 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -69,4 +71,17 @@
 
 .button:hover {
   background: $BACKGROUND-PRIMARY;
+}
+
+
+@media screen and (max-width: 700px) {
+  .controls {
+    padding-top: 375px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .controls {
+    padding-top: 325px;
+  }
 }

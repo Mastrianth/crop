@@ -54,57 +54,58 @@ const CropContainer = () => {
   return (
     <StylesProvider injectFirst>
       <div className={styles.cropContainer}>
-        <div className={styles.simpleBlock} />
-        <Cropper
-          image={image}
-          crop={crop}
-          zoom={zoom}
-          rotation={rotation}
-          aspect={3 / 3}
-          onCropChange={setCrop}
-          onCropComplete={onCropComplete}
-          onZoomChange={setZoom}
-          onRotationChange={setRotation}
-          cropSize={{ width: 300, height: 300 }}
-        />
+        <div className={styles.simpleBlock}>
+          <Cropper
+            image={image}
+            crop={crop}
+            zoom={zoom}
+            rotation={rotation}
+            aspect={3 / 3}
+            onCropChange={setCrop}
+            onCropComplete={onCropComplete}
+            onZoomChange={setZoom}
+            onRotationChange={setRotation}
+            cropSize={{ width: 300, height: 300 }}
+          />
 
-        <div className={styles.controls}>
-          <div className={styles.wrapper}>
-            <p>Scale</p>
-            <div className={styles.sliderWrapper}>
-              <Slider
-                value={zoom}
-                min={1}
-                max={3}
-                step={0.1}
-                aria-labelledby="Zoom"
+          <div className={styles.controls}>
+            <div className={styles.wrapper}>
+              <p>Scale</p>
+              <div className={styles.sliderWrapper}>
+                <Slider
+                  value={zoom}
+                  min={1}
+                  max={3}
+                  step={0.1}
+                  aria-labelledby="Zoom"
                     /* eslint-disable-next-line no-shadow */
-                onChange={(e, zoom) => setZoom(zoom)}
-                classes={{ root: styles.slider, thumb: styles.thumb }}
-              />
+                  onChange={(e, zoom) => setZoom(zoom)}
+                  classes={{ root: styles.slider, thumb: styles.thumb }}
+                />
+              </div>
             </div>
-          </div>
 
-          <div className={styles.wrapper}>
-            <p>Rotate</p>
-            <div className={styles.sliderWrapper}>
-              <Slider
-                value={rotation}
-                min={0}
-                max={360}
-                aria-labelledby="Rotation"
-                classes={{ root: styles.slider, thumb: styles.thumb }}
+            <div className={styles.wrapper}>
+              <p>Rotate</p>
+              <div className={styles.sliderWrapper}>
+                <Slider
+                  value={rotation}
+                  min={0}
+                  max={360}
+                  aria-labelledby="Rotation"
+                  classes={{ root: styles.slider, thumb: styles.thumb }}
                     /* eslint-disable-next-line no-shadow */
-                onChange={(e, rotation) => setRotation(rotation)}
-              />
+                  onChange={(e, rotation) => setRotation(rotation)}
+                />
+              </div>
             </div>
-          </div>
 
-          <div className={styles.buttonWrapper}>
-            <Button classes={{ root: styles.button }} onClick={goHome}>Change</Button>
-            <Button classes={{ root: styles.button }} onClick={showCroppedImage}>Accept</Button>
-          </div>
+            <div className={styles.buttonWrapper}>
+              <Button classes={{ root: styles.button }} onClick={goHome}>Change</Button>
+              <Button classes={{ root: styles.button }} onClick={showCroppedImage}>Accept</Button>
+            </div>
 
+          </div>
         </div>
       </div>
     </StylesProvider>
